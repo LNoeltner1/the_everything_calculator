@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import Distance from "./pages/Distance";
 import Home from "./pages/Home";
 
