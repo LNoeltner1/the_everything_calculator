@@ -5,9 +5,12 @@ import { Link } from "react-router-dom";
 
 const TypeMenu = () => {
     return (
-            <div className="row">
-                <Link to="/">Home</Link>
-                <Link to="/Distance">Distance</Link>
+            <div className="col-3 sideBar">
+                <div className="row"><Link to="/">Home</Link></div>
+                <div className="row"><Link to="/Distance">Distance</Link></div>
+            
+
+                
             </div>
 
     );
