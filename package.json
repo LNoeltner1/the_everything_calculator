@@ -1,0 +1,37 @@
+{
+  "name": "the_everything_calculator",
+  "version": "1.0.0",
+  "description": "Calculate and convert any units to any comparable units, currency converter, etc.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LNoeltner1/the_everything_calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LNoeltner1/the_everything_calculator/issues"
+  },
+  "homepage": "https://github.com/LNoeltner1/the_everything_calculator#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.11.9",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  }
+}
