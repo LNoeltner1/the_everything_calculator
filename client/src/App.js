@@ -1,12 +1,18 @@
-
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import './App.css';
+import Distance from "./pages/Distance";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src="https://www.fillmurray.com/200/300" className="App-logo" alt="logo" />
-  
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/Distance" component={Distance} />
+          </Switch>
+        </Router>
       </header>
     </div>
   );
