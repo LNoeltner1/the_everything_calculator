@@ -26,7 +26,7 @@
   max-width: 200px;
 }
 .resultBox, .inputBox, .sideBar{
-  margin-top: 20vh;
+  margin-top: 12vh;
   margin-right: 2vh;
 }
 .inputBox, .resultBox {
@@ -36,5 +36,10 @@
 
 #userInput, .inputMenu, .convertBtn {
   margin-top: 1vh;
+}
+.convertBtn {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
 }
 
