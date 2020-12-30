@@ -13,8 +13,28 @@
 /* .App-link {
   color: #61dafb;
 } */
-
+/* // SIDE MENU */
 .sideBar {
   border: 2px solid black;
   background-color: #373c46;
+  margin-left: 3vh;
+  text-align: center;
 }
+
+/* distance page */
+.inputMenu {
+  max-width: 200px;
+}
+.resultBox, .inputBox, .sideBar{
+  margin-top: 20vh;
+  margin-right: 2vh;
+}
+.inputBox, .resultBox {
+  background-color: #3b404b;
+  padding: 3vh;
+}
+
+#userInput, .inputMenu, .convertBtn {
+  margin-top: 1vh;
+}
+

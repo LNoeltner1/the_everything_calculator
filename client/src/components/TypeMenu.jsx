@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const TypeMenu = () => {
     return (
-            <div className="col-3 sideBar">
+            <div className="col-2 sideBar">
                 <div className="row"><Link to="/">Home</Link></div>
                 <div className="row"><Link to="/Distance">Distance</Link></div>
             
