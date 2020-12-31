@@ -6,8 +6,6 @@ import "../App.css";
 
 const Distance = () => {
     const [inputValue, setInputValue] = useState(Number);
-    const [inputUnit, setInputUnit] = useState(String);
-    const [outputUnit, setOutputUnit] = useState(String);
     const [result, setResult] = useState(Number);
 
     
@@ -24,17 +22,7 @@ const Distance = () => {
     const milesToKilometers = () => {
         setResult(inputValue * 1.609);
     }
-    //handling unit changes
-    const handleInputUnitChange = (e) => {
-        e.preventDefault();
-        let { inputUnit } = e.target;
-        setInputUnit(inputUnit);
-    }
-    const handleOutputUnitChange = (e) => {
-        e.preventDefault();
-        let { outputUnit } = e.target;
-        setOutputUnit(outputUnit);
-    }
+    
 
     const handleConvert = (e) => {
         e.preventDefault();
@@ -59,7 +47,7 @@ const Distance = () => {
                 {/* <div className="row"> */}
                     <input id="userInput" type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
                     <div className="select inputMenu">
-                        <select id="unitInput" name="unitInput" onChange={handleInputUnitChange}>
+                        <select id="unitInput" name="unitInput">
                             <option value="0">Select unit:</option>
                             <option value="inches">inches</option>
                             <option value="feet">feet</option>
@@ -81,7 +69,7 @@ const Distance = () => {
             </div>
             <div className="col-md-4 resultBox">Result: {result} 
                 <div className="select outputMenu">
-                    <select id="unitOutput" name="unitOutput" onChange={handleOutputUnitChange}>
+                    <select id="unitOutput" name="unitOutput">
                         <option value="0">Select unit:</option>
                         <option value="inches">inches</option>
                             <option value="feet">feet</option>
