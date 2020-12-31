@@ -21,8 +21,7 @@ const Distance = () => {
     const kilometersToMiles = () => {
         setResult(inputValue / 1.609);
     }
-    const milesToKilometers = (e) => {
-        e.preventDefault();
+    const milesToKilometers = () => {
         setResult(inputValue * 1.609);
     }
     //handling unit changes
@@ -45,7 +44,7 @@ const Distance = () => {
         //TODO: inputUnit undefined
         if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilometers" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "miles") {
             kilometersToMiles();
-        } else if (inputUnit === "miles" && outputUnit === "kilometers") {
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "miles" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilometers") {
             milesToKilometers();
         } else {
             console.log("you done goofed");
