@@ -15,13 +15,37 @@ const Distance = () => {
         let { value } = e.target;
         setInputValue(value);
     }
-    //conversion math
+    // CONVERSION EQUATIONS
+    
+    // miles and kilometers
     const kilometersToMiles = () => {
         setResult(inputValue / 1.609);
     }
     const milesToKilometers = () => {
         setResult(inputValue * 1.609);
     }
+    // inches and feet
+    // inches and yards
+    // inches and miles
+    // inches and millimeters
+    // inches and centimeters
+    // inches and meters
+    // inches and kilometers
+    // feet and yards
+    // feet and miles
+    // feet and millimeters
+    // feet and centimeters
+    // feet and meters
+    // feet and kilometers
+    // miles and millimeters
+    // miles and centimeters
+    // miles and meters
+    // miles and kilometers
+    // millimeters and centimeters
+    // millimeters and meters
+    // millimeters and kilometers
+    // centimeters and meters
+    // centimeters and kilometers
     
 
     const handleConvert = (e) => {
