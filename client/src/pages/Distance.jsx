@@ -64,36 +64,46 @@ const Distance = () => {
     }
 
     return (
-        <div className="row">
+        <div className="row mainSection">
             {/* <div className="col-md-1"></div> */}
             <TypeMenu />
-            <div className="col-md-4 inputBox">
-                {/* <div className="row"> */}
-                    <input id="userInput" type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
-                    <div className="select inputMenu">
-                        <select id="unitInput" name="unitInput">
-                            <option value="0">Select unit:</option>
-                            <option value="inches">inches</option>
-                            <option value="feet">feet</option>
-                            <option value="yards">yards</option>
-                            <option value="miles">miles</option>
-                            <option value="millimeters">millimeters</option>
-                            <option value="centimeters">centimeters</option>
-                            <option value="meters">meters</option>
-                            <option value="kilometers">kilometers</option>
-                            <option value="nauticalMiles">nautical miles</option>
-                            <option value="lightYears">light-years</option>
-                            <option value="astronomicalUnit">Astronomical Unit (AU)</option>
-                        </select>
+            <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
+                <div className="row ">
+                    <div className="col-md-12">
+                        <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
+                        <div className="select inputMenu text-center">
+                            <select id="unitInput" className="unitMenu" name="unitInput">
+                                <option value="0">Select unit:</option>
+                                <option value="inches">inches</option>
+                                <option value="feet">feet</option>
+                                <option value="yards">yards</option>
+                                <option value="miles">miles</option>
+                                <option value="millimeters">millimeters</option>
+                                <option value="centimeters">centimeters</option>
+                                <option value="meters">meters</option>
+                                <option value="kilometers">kilometers</option>
+                                <option value="nauticalMiles">nautical miles</option>
+                                <option value="lightYears">light-years</option>
+                                <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                            </select>
+                        </div>
                     </div>
-                    <button className="convertBtn" onClick={handleConvert}>Convert!</button>
-                {/* </div> */}
+                        
+                </div>
+                
+                    
                 
                 
             </div>
-            <div className="col-md-4 resultBox">Result: {result} 
-                <div className="select outputMenu">
-                    <select id="unitOutput" name="unitOutput">
+            {/* <div className="row"> */}
+            <div className="col-md-2 col-xs-10 col-sm-10 buttonBox">
+                <button className="convertBtn" onClick={handleConvert}>Convert!</button>
+            </div>
+                    
+            {/* </div> */}
+            <div className="col-md-3 col-xs-10 col-sm-10 resultBox">Result: {result} 
+                <div className="select outputMenu text-center">
+                    <select id="unitOutput" className="unitMenu" name="unitOutput">
                         <option value="0">Select unit:</option>
                         <option value="inches">inches</option>
                             <option value="feet">feet</option>
