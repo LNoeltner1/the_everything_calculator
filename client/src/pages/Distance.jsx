@@ -74,12 +74,48 @@ const Distance = () => {
         setResult(inputValue * 39370);
     }
     // feet and yards
-    
+    const feetToYards = () => {
+        setResult(inputValue / 3);
+    }
+    const yardsToFeet = () => {
+        setResult(inputValue * 3);
+    }
     // feet and miles
+    const feetToMiles = () => {
+        setResult(inputValue * 5280);
+    }
+    const milesToFeet = () => {
+        setResult(inputValue / 5280);
+    }
     // feet and millimeters
+    const feetToMillimeters = () => {
+        setResult(inputValue * 304.8);
+    }
+    const millimetersToFeet = () => {
+        setResult(inputValue / 304.8);
+    }
     // feet and centimeters
+    const feetToCentimeters = () => {
+        setResult(inputValue * 30.48);
+    }
+    const centimetersToFeet = () => {
+        setResult(inputValue / 30.48);
+    }
     // feet and meters
+    const feetToMeters = () => {
+        setResult(inputValue / 3.281);
+    }
+    const metersToFeet = () => {
+        setResult(inputValue * 3.281);
+    }
     // feet and kilometers
+    const feetToKilometers = () => {
+        setResult(inputValue / 3281);
+    }
+    const kilometersToFeet = () => {
+        setResult(inputValue * 3281);
+    }
+ 
     // miles and millimeters
     // miles and centimeters
     // miles and meters
