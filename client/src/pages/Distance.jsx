@@ -1,6 +1,7 @@
 import React, { Component, useState } from 'react';
 import TypeMenu from '../components/TypeMenu';
 import "../App.css";
+import { set } from 'mongoose';
 
 
 
@@ -19,10 +20,10 @@ const Distance = () => {
     
     // miles and kilometers
     const kilometersToMiles = () => {
-        setResult(inputValue / 1.609);
+        setResult(inputValue / 1.60934);
     }
     const milesToKilometers = () => {
-        setResult(inputValue * 1.609);
+        setResult(inputValue * 1.60934);
     }
     // inches and feet
     const inchesToFeet = () => {
@@ -115,16 +116,62 @@ const Distance = () => {
     const kilometersToFeet = () => {
         setResult(inputValue * 3281);
     }
- 
     // miles and millimeters
+    const milesToMillimeters = () => {
+        setResult(inputValue * 1609340000);
+    }
+    const millimetersToMiles = () => {
+        setResult(inputValue / 1609340000);
+    }
     // miles and centimeters
+    const milesToCentimeters = () => {
+        setResult(inputValue * 160934);
+    }
+    const centimetersToMiles = () => {
+        setResult(inputValue / 160934)
+    }
     // miles and meters
-    // miles and kilometers
+    const milesToMeters = () => {
+        setResult(inputValue * 1609.34);
+    }
+    const metersToMiles = () => {
+        setResult(inputValue / 1609.34);
+    }
     // millimeters and centimeters
+    const millimetersToCentimeters = () => {
+        setResult(inputValue / 10);
+    }
+    const centimetersToMillimeters = () => {
+        setResult(inputValue * 10);
+    }
     // millimeters and meters
+    const millimetersToMeters = () => {
+        setResult(inputValue / 1000);
+    }
+    const metersToMillimeters = () => {
+        setResult(inputValue * 1000)
+    }
     // millimeters and kilometers
+    const millimetersToKilometers = () => {
+        setResult(inputValue / 1000000);
+    }
+    const kilometersToMillimeters = () => {
+        setResult(inputValue * 1000000);
+    }
     // centimeters and meters
+    const centimetersToMeters = () => {
+        setResult(inputValue / 100);
+    }
+    const metersToCentimeters = () => {
+        setResult(inputValue * 100);
+    }
     // centimeters and kilometers
+    const centimetersToKilometers = () => {
+        setResult(inputValue / 100000);
+    }
+    const kilometersToCentimeters = () => {
+        setResult(inputValue * 100000);
+    }
     
 
     const handleConvert = (e) => {
@@ -165,11 +212,6 @@ const Distance = () => {
                         <option value="astronomicalUnit">Astronomical Unit (AU)</option>
                     </select>
                 </div>
- 
-                
-                    
-                
-                
             </div>
             {/* <div className="row"> */}
             <div className="col-md-2 col-xs-10 col-sm-10 buttonBox">
