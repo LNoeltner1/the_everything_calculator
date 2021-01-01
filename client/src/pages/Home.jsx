@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TypeMenu from '../components/TypeMenu';
+import SideBar from '../components/SideBar';
 import { Link } from "react-router-dom";
 import "../App.css";
 
@@ -7,9 +7,9 @@ class Home extends Component {
     render() {
         return (
             <div className="row homeContainer">
-                <TypeMenu />
+                <SideBar />
                 
-                <div className="col-4">
+                <div className="col-8 mainColumnHome">
                     Hello, welcome to my home page. You can convert anything on 
                     this website, just click on the type of conversion you want 
                     to calculate on the sidebar.

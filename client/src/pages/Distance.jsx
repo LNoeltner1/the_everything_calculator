@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import TypeMenu from '../components/TypeMenu';
+import SideBar from '../components/SideBar';
 import "../App.css";
 import { set } from 'mongoose';
 
@@ -407,7 +407,7 @@ const Distance = () => {
     return (
         <div className="row mainSection">
             {/* <div className="col-md-1"></div> */}
-            <TypeMenu />
+            <SideBar />
             <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
                 
                 <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
