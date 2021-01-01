@@ -158,6 +158,13 @@ const Distance = () => {
     const kilometersToMillimeters = () => {
         setResult(inputValue * 1000000);
     }
+    // meters and kilometers
+    const metersToKilometers = () => {
+        setResult(inputValue / 1000);
+    }
+    const kilometersToMeters = () => {
+        setResult(inputValue * 1000);
+    }
     // centimeters and meters
     const centimetersToMeters = () => {
         setResult(inputValue / 100);
@@ -171,6 +178,13 @@ const Distance = () => {
     }
     const kilometersToCentimeters = () => {
         setResult(inputValue * 100000);
+    }
+    // yards and meters
+    const yardsToMeters = () => {
+        setResult(inputValue / 1.094);
+    }
+    const metersToYards = () => {
+        setResult(inputValue * 1.094);
     }
     
 
@@ -229,6 +243,80 @@ const Distance = () => {
         } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilometers" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "feet") {
             kilometersToFeet();
         } 
+        //inches and miles        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "inches" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "miles") {
+            inchesToMiles();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "miles" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "inches") {
+            milesToInches();
+        }
+        //inches and yards        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "inches" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "yards") {
+            inchesToYards();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "yards" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "inches") {
+            yardsToInches();
+        }
+        //inches and centimeters        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "inches" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "centimeters") {
+            inchesToCentimeters();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "centimeters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "inches") {
+            centimetersToInches();
+        }
+        //inches and millimeters      
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "inches" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "millimeters") {
+            inchesToMillimeters();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "millimeters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "inches") {
+            millimetersToInches();
+        }
+        //inches and kilometers        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "inches" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilometers") {
+            inchesToKilometers();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilometers" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "inches") {
+            kilometersToInches();
+        }
+        //inches and meters        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "inches" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "meters") {
+            inchesToMeters();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "meters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "inches") {
+            metersToInches();
+        }
+        //meters and miles        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "meters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "miles") {
+            metersToMiles();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "miles" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "meters") {
+            milesToMeters();
+        }
+        //meters and yards        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "meters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "yards") {
+            metersToYards();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "yards" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "meters") {
+            yardsToMeters();
+        }
+        //meters and centimeters        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "meters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "centimeters") {
+            metersToCentimeters();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "centimeters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "meters") {
+            centimetersToMeters();
+        }
+        //meters and millimeters        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "meters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "millimeters") {
+            metersToMillimeters();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "millimeters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "meters") {
+            millimetersToMeters();
+        }
+        //meters and kilometers        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "meters" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilometers") {
+            metersToKilometers();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilometers" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "meters") {
+            kilometersToMeters();
+        }
+
+
+        //feet and kilometers        
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "feet" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilometers") {
+            feetToKilometers();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilometers" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "feet") {
+            kilometersToFeet();
+        }
         // IF NOTHING MATCHES
         else {
             console.log("you done goofed");
