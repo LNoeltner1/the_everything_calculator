@@ -8,6 +8,13 @@ import "../App.css";
 const Distance = () => {
     const [inputValue, setInputValue] = useState(Number);
     const [result, setResult] = useState(Number);
+    // const [pageTitle, setPageTitle] = useState(String);
+
+    // const getPageTitle = (e) => {
+    //     e.preventDefault();
+    //     let title = 
+    //     console.log(pageTitle);
+    // }
 
     
 
@@ -17,7 +24,6 @@ const Distance = () => {
         setInputValue(value);
     }
     // CONVERSION EQUATIONS
-    
     // miles and kilometers
     const kilometersToMiles = () => {
         setResult(inputValue / 1.60934);
@@ -408,50 +414,63 @@ const Distance = () => {
         <div className="row mainSection">
             {/* <div className="col-md-1"></div> */}
             <SideBar />
-            <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
-                
-                <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
-                <div className="select inputMenu text-center">
-                    <select id="unitInput" className="unitMenu" name="unitInput">
-                        <option value="0">Select unit:</option>
-                        <option value="inches">inches</option>
-                        <option value="feet">feet</option>
-                        <option value="yards">yards</option>
-                        <option value="miles">miles</option>
-                        <option value="millimeters">millimeters</option>
-                        <option value="centimeters">centimeters</option>
-                        <option value="meters">meters</option>
-                        <option value="kilometers">kilometers</option>
-                        <option value="nauticalMiles">nautical miles</option>
-                        <option value="lightYears">light-years</option>
-                        <option value="astronomicalUnit">Astronomical Unit (AU)</option>
-                    </select>
+
+            <div className="col-9">
+                <div className="row titleRow">
+                    <div className="col-md-12">
+                        <h3>Distance / Length</h3>
+                    </div>
                 </div>
-            </div>
-            {/* <div className="row"> */}
-            <div className="col-md-2 col-xs-10 col-sm-10 buttonBox">
-                <button className="convertBtn" onClick={handleConvert}>Convert!</button>
-            </div>
+                <div className="row">
                     
-            {/* </div> */}
-            <div className="col-md-4 col-xs-10 col-sm-10 resultBox">Result: {result} 
-                <div className="select outputMenu text-center">
-                    <select id="unitOutput" className="unitMenu" name="unitOutput">
-                        <option value="0">Select unit:</option>
-                        <option value="inches">inches</option>
-                        <option value="feet">feet</option>
-                        <option value="yards">yards</option>
-                        <option value="miles">miles</option>
-                        <option value="millimeters">millimeters</option>
-                        <option value="centimeters">centimeters</option>
-                        <option value="meters">meters</option>
-                        <option value="kilometers">kilometers</option>
-                        <option value="nauticalMiles">nautical miles</option>
-                        <option value="lightYears">light-years</option>
-                        <option value="astronomicalUnit">Astronomical Unit (AU)</option>
-                    </select>
+                    <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
+                    
+                        <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
+                        <div className="select inputMenu text-center">
+                            <select id="unitInput" className="unitMenu" name="unitInput">
+                                <option value="0">Select unit:</option>
+                                <option value="inches">inches</option>
+                                <option value="feet">feet</option>
+                                <option value="yards">yards</option>
+                                <option value="miles">miles</option>
+                                <option value="millimeters">millimeters</option>
+                                <option value="centimeters">centimeters</option>
+                                <option value="meters">meters</option>
+                                <option value="kilometers">kilometers</option>
+                                <option value="nauticalMiles">nautical miles</option>
+                                <option value="lightYears">light-years</option>
+                                <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    {/* <div className="row"> */}
+                    <div className="col-md-2 col-xs-10 col-sm-10 buttonBox">
+                        <button className="convertBtn" onClick={handleConvert}>Convert!</button>
+                    </div>
+                            
+                    {/* </div> */}
+                    <div className="col-md-4 col-xs-10 col-sm-10 resultBox">Result: {result} 
+                        <div className="select outputMenu text-center">
+                            <select id="unitOutput" className="unitMenu" name="unitOutput">
+                                <option value="0">Select unit:</option>
+                                <option value="inches">inches</option>
+                                <option value="feet">feet</option>
+                                <option value="yards">yards</option>
+                                <option value="miles">miles</option>
+                                <option value="millimeters">millimeters</option>
+                                <option value="centimeters">centimeters</option>
+                                <option value="meters">meters</option>
+                                <option value="kilometers">kilometers</option>
+                                <option value="nauticalMiles">nautical miles</option>
+                                <option value="lightYears">light-years</option>
+                                <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            
+            </div>        
         </div>
     );
 };

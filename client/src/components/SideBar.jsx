@@ -8,11 +8,11 @@ import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const TypeMenu = () => {
     return (
-            <div className="col-md-2 col-xs-2 col-sm-2 sideBar">
-                <p><Link to="/" className="navLink">Home</Link></p>
+            <div className="col-md-2 col-xs-12 col-sm-2 sideBar">
+                <p><Link to="/" id="homeLink" className="navLink">Home</Link></p>
                 <hr />
-                <p><Link to="/Distance" className="navLink">Distance</Link></p>
-                <p><Link to="/Mass" className="navLink">Mass/Weight</Link></p>
+                <p><Link to="/Distance" id="distanceLink" className="navLink">Distance</Link></p>
+                <p><Link to="/Mass" id="massLink" className="navLink">Mass/Weight</Link></p>
             
 
                 

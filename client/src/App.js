@@ -3,6 +3,7 @@ import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Distance from "./pages/Distance";
 import Home from "./pages/Home";
+import Mass from "./pages/Mass";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/Distance" component={Distance} />
+            <Route exact path="/Mass" component={Mass} />
           </Switch>
         </Router>
       </header>
