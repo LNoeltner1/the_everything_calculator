@@ -92,15 +92,75 @@ const Mass = () => {
         setResult(inputValue * 1000000000);
     }
     //mg and karats
+    const milligramsToKarats = () => {
+        setResult(inputValue / 200);
+    }
+    const karatsToMilligrams = () => {
+        setResult(inputValue * 200);
+    }
     //mg and oz
+    const milligramsToOunces = () => {
+        setResult(inputValue / 28350);
+    }
+    const ouncesToMilligrams = () => {
+        setResult(inputValue * 28350);
+    }
     //mg and pounds
+    const milligramsToPounds = () => {
+        setResult(inputValue / 453592);
+    }
+    const poundsToMilligrams = () => {
+        setResult(inputValue * 453592);
+    }
     //mg and stone
+    const milligramsToStone = () => {
+        setResult(inputValue / 6350000);
+    }
+    const stoneToMilligrams = () => {
+        setResult(inputValue * 6350000);
+    }
     //g and tonne
+    const gramsToTonnes = () => {
+        setResult(inputValue / 1000000);
+    }
+    const tonnesToGrams = () => {
+        setResult(inputValue * 1000000);
+    }
     //g and karats
+    const gramsToKarats = () => {
+        setResult(inputValue * 5);
+    }
+    const karatsToGrams = () => {
+        setResult(inputValue / 5);
+    }
     //g and oz
+    const gramsToOunces = () => {
+        setResult(inputValue / 28.35);
+    }
+    const ouncesToGrams = () => {
+        setResult(inputValue * 28.35);
+    }
     //g and pounds
+    const gramsToPounds = () => {
+        setResult(inputValue / 454);
+    }
+    const poundsToGrams = () => {
+        setResult(inputValue * 454);
+    }
     //g and stone
+    const gramsToStone = () => {
+        setResult(inputValue / 6350);
+    }
+    const stoneToGrams = () => {
+        setResult(inputValue * 6350);
+    }
     //g and ton
+    const gramsToTons = () => {
+        setResult(inputValue / 6350);
+    }
+    const tonsToGrams = () => {
+        setResult(inputValue * 6350);
+    }
     //kg and tonnes
     //kg and karats
     //kg and oz
