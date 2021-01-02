@@ -261,10 +261,10 @@ const Mass = () => {
     }
     //oz and ton
     const ouncesToTons = () => {
-        setResult(inputValue / 6350);
+        setResult(inputValue / 32000);
     }
     const tonsToOunces = () => {
-        setResult(inputValue * 6350);
+        setResult(inputValue * 32000);
     }
 
 
@@ -318,17 +318,15 @@ const Mass = () => {
                 <div className="select inputMenu text-center">
                     <select id="unitInput" className="unitMenu" name="unitInput">
                         <option value="0">Select unit:</option>
-                        <option value="inches">inches</option>
-                        <option value="feet">feet</option>
-                        <option value="yards">yards</option>
-                        <option value="miles">miles</option>
-                        <option value="millimeters">millimeters</option>
-                        <option value="centimeters">centimeters</option>
-                        <option value="meters">meters</option>
-                        <option value="kilometers">kilometers</option>
-                        <option value="nauticalMiles">nautical miles</option>
-                        <option value="lightYears">light-years</option>
-                        <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                        <option value="ounces">ounces</option>
+                        <option value="pounds">pounds</option>
+                        <option value="stone">stone</option>
+                        <option value="tons">tons</option>
+                        <option value="milligrams">milligrams</option>
+                        <option value="grams">grams</option>
+                        <option value="kilograms">kilograms</option>
+                        <option value="tonnes">tonnes</option>
+                        <option value="nauticalMiles">karats</option>
                     </select>
                 </div>
             </div>
@@ -342,17 +340,15 @@ const Mass = () => {
                 <div className="select outputMenu text-center">
                     <select id="unitOutput" className="unitMenu" name="unitOutput">
                         <option value="0">Select unit:</option>
-                        <option value="inches">inches</option>
-                        <option value="feet">feet</option>
-                        <option value="yards">yards</option>
-                        <option value="miles">miles</option>
-                        <option value="millimeters">millimeters</option>
-                        <option value="centimeters">centimeters</option>
-                        <option value="meters">meters</option>
-                        <option value="kilometers">kilometers</option>
-                        <option value="nauticalMiles">nautical miles</option>
-                        <option value="lightYears">light-years</option>
-                        <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                        <option value="ounces">ounces</option>
+                        <option value="pounds">pounds</option>
+                        <option value="stone">stone</option>
+                        <option value="tons">tons</option>
+                        <option value="milligrams">milligrams</option>
+                        <option value="grams">grams</option>
+                        <option value="kilograms">kilograms</option>
+                        <option value="tonnes">tonnes</option>
+                        <option value="nauticalMiles">karats</option>
                     </select>
                 </div>
             </div>
