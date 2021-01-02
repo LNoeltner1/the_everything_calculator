@@ -13,6 +13,7 @@ const TypeMenu = () => {
                 <hr />
                 <p><Link to="/Distance" id="distanceLink" className="navLink">Distance</Link></p>
                 <p><Link to="/Mass" id="massLink" className="navLink">Mass/Weight</Link></p>
+                <p><Link to="/Volume" id="volumeLink" className="navLink">Volume</Link></p>
             
 
                 

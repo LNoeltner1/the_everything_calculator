@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Distance from "./pages/Distance";
 import Home from "./pages/Home";
 import Mass from "./pages/Mass";
+import Volume from "./pages/Volume";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/Distance" component={Distance} />
             <Route exact path="/Mass" component={Mass} />
+            <Route exact path="/Volume" component={Volume} />
           </Switch>
         </Router>
       </header>
