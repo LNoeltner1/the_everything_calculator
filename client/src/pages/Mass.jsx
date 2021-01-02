@@ -5,6 +5,7 @@ import "../App.css";
 const Mass = () => {
     const [inputValue, setInputValue] = useState(Number);
     const [result, setResult] = useState(Number);
+    const [resultUnit, setResultUnit] = useState(String);
 
     
 
@@ -13,6 +14,8 @@ const Mass = () => {
         let { value } = e.target;
         setInputValue(value);
     }
+    
+
     // CONVERSION EQUATIONS
     //mg and g
     const milligramsToGrams = () => {
@@ -277,7 +280,7 @@ const Mass = () => {
         let inputUnitMenu = document.getElementById("unitInput");
         let outputUnitMenu = document.getElementById("unitOutput");
         console.log(inputUnitMenu.options[inputUnitMenu.selectedIndex].value);
-        
+        setResultUnit(outputUnitMenu.options[outputUnitMenu.selectedIndex].value);
         // comparing unit choices
         //mg and kg
         if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
@@ -530,7 +533,7 @@ const Mass = () => {
             <div className="col-9">
                 <div className="row titleRow">
                     <div className="col-md-12">
-                        <h3>Distance / Length</h3>
+                        <h3>Mass / Weight</h3>
                     </div>
                 </div>
                 <div className="row">
@@ -541,15 +544,15 @@ const Mass = () => {
                         <div className="select inputMenu text-center">
                             <select id="unitInput" className="unitMenu" name="unitInput">
                                 <option value="0">Select unit:</option>
-                                <option value="ounces">ounces</option>
-                                <option value="pounds">pounds</option>
-                                <option value="stone">stone</option>
+                                <option value="ounces">ounces (oz.)</option>
+                                <option value="pounds">pounds (lbs.)</option>
+                                <option value="stone">stone (st.)</option>
                                 <option value="tons">tons</option>
-                                <option value="milligrams">milligrams</option>
-                                <option value="grams">grams</option>
-                                <option value="kilograms">kilograms</option>
-                                <option value="tonnes">tonnes</option>
-                                <option value="nauticalMiles">karats</option>
+                                <option value="milligrams">milligrams (mg)</option>
+                                <option value="grams">grams (g)</option>
+                                <option value="kilograms">kilograms (kg)</option>
+                                <option value="tonnes">metric tonnes</option>
+                                <option value="karats">karats</option>
                             </select>
                         </div>
                     </div>
@@ -560,19 +563,30 @@ const Mass = () => {
                     </div>
                             
                     {/* </div> */}
-                    <div className="col-md-4 col-xs-10 col-sm-10 resultBox">Result: {result} 
+                    <div className="col-md-4 col-xs-10 col-sm-10 resultBox">
+                        <div className="row">
+                            <div className="col-md-3">
+                                <p>Result: </p>
+                            </div>
+                            <div className="col-md-8">
+                                <p className="">{result} {resultUnit}</p>
+                            </div>
+                            
+                        </div>
+                        
+                        
                         <div className="select outputMenu text-center">
                             <select id="unitOutput" className="unitMenu" name="unitOutput">
                                 <option value="0">Select unit:</option>
-                                <option value="ounces">ounces</option>
-                                <option value="pounds">pounds</option>
-                                <option value="stone">stone</option>
+                                <option value="ounces">ounces (oz.)</option>
+                                <option value="pounds">pounds (lbs.)</option>
+                                <option value="stone">stone (st.)</option>
                                 <option value="tons">tons</option>
-                                <option value="milligrams">milligrams</option>
-                                <option value="grams">grams</option>
-                                <option value="kilograms">kilograms</option>
+                                <option value="milligrams">milligrams (mg)</option>
+                                <option value="grams">grams (g)</option>
+                                <option value="kilograms">kilograms (kg)</option>
                                 <option value="tonnes">tonnes</option>
-                                <option value="nauticalMiles">karats</option>
+                                <option value="karats">karats</option>
                             </select>
                         </div>
                     </div>
