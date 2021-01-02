@@ -156,29 +156,116 @@ const Mass = () => {
     }
     //g and ton
     const gramsToTons = () => {
-        setResult(inputValue / 6350);
+        setResult(inputValue / 907185);
     }
     const tonsToGrams = () => {
+        setResult(inputValue * 907185);
+    }
+    //kg and karats
+    const kilogramsToKarats = () => {
+        setResult(inputValue * 5000);
+    }
+    const karatsToKilograms = () => {
+        setResult(inputValue / 5000);
+    }
+    //kg and oz
+    const kilogramsToOunces = () => {
+        setResult(inputValue * 35.274);
+    }
+    const ouncesToKilograms = () => {
+        setResult(inputValue / 35.274);
+    }
+    //kg and pounds
+    const kilogramsToPounds = () => {
+        setResult(inputValue * 2.205);
+    }
+    const poundsToKilograms = () => {
+        setResult(inputValue / 2.205);
+    }
+    //kg and stone
+    const kilogramsToStone = () => {
+        setResult(inputValue / 6.35);
+    }
+    const stoneToKilograms = () => {
+        setResult(inputValue * 6.35);
+    }
+    //kg and tons
+    const kilogramsToTons = () => {
+        setResult(inputValue / 907.185);
+    }
+    const tonsToKilograms = () => {
+        setResult(inputValue * 907.185);
+    }
+    //tonnes and oz
+    const tonnesToOunces = () => {
+        setResult(inputValue * 35274);
+    }
+    const ouncesToTonnes = () => {
+        setResult(inputValue / 35274);
+    }
+    //tonnes and pounds
+    const tonnesToPounds = () => {
+        setResult(inputValue * 2205);
+    }
+    const poundsToTonnes = () => {
+        setResult(inputValue / 2205);
+    }
+    //tonnes and stone
+    const tonnesToStone = () => {
+        setResult(inputValue * 157);
+    }
+    const stoneToTonnes = () => {
+        setResult(inputValue / 157);
+    }
+    //tonnes and tons
+    const tonnesToTons = () => {
+        setResult(inputValue * 1.102);
+    }
+    const tonsToTonnes = () => {
+        setResult(inputValue / 1.102);
+    }
+    //pounds and tons
+    const poundsToTons = () => {
+        setResult(inputValue / 2000);
+    }
+    const tonsToPounds = () => {
+        setResult(inputValue * 2000);
+    }
+    //karats and tons
+    const karatsToTons = () => {
+        setResult(inputValue / 4536000);
+    }
+    const tonsToKarats = () => {
+        setResult(inputValue * 4536000);
+    }
+    //karats and pounds
+    const karatsToPounds = () => {
+        setResult(inputValue / 2268);
+    }
+    const poundsToKarats = () => {
+        setResult(inputValue * 2268);
+    }
+    //karats and stone
+    const karatsToStone = () => {
+        setResult(inputValue / 31751);
+    }
+    const stoneToKarats = () => {
+        setResult(inputValue * 31751);
+    }
+    //oz and stone
+    const ouncesToStone = () => {
+        setResult(inputValue / 224);
+    }
+    const stoneToOunces = () => {
+        setResult(inputValue * 224);
+    }
+    //oz and ton
+    const ouncesToTons = () => {
+        setResult(inputValue / 6350);
+    }
+    const tonsToOunces = () => {
         setResult(inputValue * 6350);
     }
-    //kg and tonnes
-    //kg and karats
-    //kg and oz
-    //kg and pounds
-    //kg and stone
-    //kg and tons
-    //tonnes and karats
-    //tonnes and oz
-    //tonnes and pounds
-    //tonnes and stone
-    //tonnes and tons
-    //pounds and tons
-    //karats and tons
-    //karats and pounds
-    //karats and stone
-    //oz and pounds
-    //oz and stone
-    //oz and ton
 
 
     
