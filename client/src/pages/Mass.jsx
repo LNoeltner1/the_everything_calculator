@@ -280,53 +280,237 @@ const Mass = () => {
         
         // comparing unit choices
         //mg and kg
-        if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilometers" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "miles") {
-            kilometersToMiles();
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "miles" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilometers") {
-            milesToKilometers();
+        if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            milligramsToKilograms();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            kilogramsToMilligrams();
         }
         //g and kg
-         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "feet" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "miles") {
-            feetToMiles();
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "miles" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "feet") {
-            milesToFeet();
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "grams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            gramsToKilograms();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "grams") {
+            kilogramsToGrams();
         }
         //kg and tonnes
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tonnes") {
+            kilogramsToTonnes();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tonnes" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            tonnesToKilograms();
+        }
         //tonnes and karats
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tonnes" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            tonnesToKarats();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tonnes") {
+            karatsToTonnes();
+        }
         //carats and oz
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ounces") {
+            karatsToOunces();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ounces" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            ouncesToKarats();
+        }
         //oz and pounds
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ounces" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "pounds") {
+            ouncesToPounds();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "pounds" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ounces") {
+            poundsToOunces();
+        }
         //pounds and stone
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "pounds" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "stone") {
+            poundsToStone();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "stone" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "pounds") {
+            stoneToPounds();
+        }
         //stone and tons
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "stone" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            stoneToTons();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "stone") {
+            tonsToStone();
+        }
         //tons and mg
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            tonsToMilligrams();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            milligramsToTons();
+        }
         //mg and kg
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            milligramsToKilograms();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            kilogramsToMilligrams();
+        }
         //mg and tonnes
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            milligramsToTonnes();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            tonnesToMilligrams();
+        }
         //mg and karats
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            milligramsToKarats();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            karatsToMilligrams();
+        }
         //mg and oz
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ounces") {
+            milligramsToOunces();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ounces" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            ouncesToMilligrams();
+        }
         //mg and pounds
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "pounds") {
+            milligramsToPounds();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "pounds" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            poundsToMilligrams();
+        }
         //mg and stone
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "stone") {
+            milligramsToStone();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "stone" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            stoneToMilligrams();
+        }
         //g and tonnes
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "grams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tonnes") {
+            gramsToTonnes();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tonnes" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "grams") {
+            tonnesToGrams();
+        }
         //g and karats
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "grams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            gramsToKarats();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "grams") {
+            karatsToGrams();
+        }
         //g and oz
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "grams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ounces") {
+            gramsToOunces();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ounces" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "grams") {
+            ouncesToGrams();
+        }
         //g and pounds
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "grams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "pounds") {
+            gramsToPounds();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "pounds" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "grams") {
+            poundsToGrams();
+        }
         //g and stone
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "grams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "stone") {
+            gramsToStone();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "stone" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "grams") {
+            stoneToGrams();
+        }
         //g and ton
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "grams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            gramsToTons();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "grams") {
+            tonsToGrams();
+        }
         //kg and karats
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            kilogramsToKarats();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            karatsToKilograms();
+        }
         //kg and oz
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ounces") {
+            kilogramsToOunces();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ounces" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            ouncesToKilograms();
+        }
         //kg and pounds
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "pounds") {
+            kilogramsToPounds();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "pounds" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            poundsToKilograms();
+        }
         //kg and stone
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "stone") {
+            kilogramsToStone();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "stone" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            stoneToKilograms();
+        }
         //kg and ton
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilograms" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            kilogramsToTons();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilograms") {
+            tonsToKilograms();
+        }
         //tonnes and karats
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tonnes" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            tonnesToKarats();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tonnes") {
+            karatsToTonnes();
+        }
         //tonnes and oz
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tonnes" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ounces") {
+            tonnesToOunces();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ounces" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tonnes") {
+            ouncesToTonnes();
+        }
         //tonnes and pounds
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tonnes" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "pounds") {
+            tonnesToPounds();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "pounds" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tonnes") {
+            poundsToTonnes();
+        }
         //tonnes and stone
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tonnes" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "stone") {
+            tonnesToStone();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "stone" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tonnes") {
+            stoneToTonnes();
+        }
         //tonnes and tons
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tonnes" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            tonnesToTons();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tonnes") {
+            tonsToTonnes();
+        }
         //pounds and tons
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "pounds" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            poundsToTons();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "pounds") {
+            tonsToPounds();
+        }
         //karats and tons
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            karatsToTons();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            tonsToKarats();
+        }
         //karats and pounds
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "pounds") {
+            karatsToPounds();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "pounds" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            poundsToKarats();
+        }
         //karats and stone
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "karats" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "stone") {
+            karatsToStone();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "stone" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "karats") {
+            stoneToKarats();
+        }
         //oz and stone
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ounces" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "stone") {
+            ouncesToStone();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "stone" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ounces") {
+            stoneToOunces();
+        }
         //oz and tons
-
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ounces" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tons") {
+            ouncesToTons();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tons" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ounces") {
+            tonsToOunces();
+        }
+        //mg and g
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "milligrams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "grams") {
+            milligramsToGrams();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "grams" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "milligrams") {
+            gramsToMilligrams();
+        }
+        //IF USER DOES NOT SELECT A UNIT
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "0" || outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "0") {
+            alert("You must select a unit.");
+        }
         // IF INPUT AND OUTPUT UNIT ARE THE SAME
         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === outputUnitMenu.options[outputUnitMenu.selectedIndex].value) {
             console.log("no can do, buckaroo");
@@ -334,7 +518,7 @@ const Mass = () => {
         }
         // IF NOTHING MATCHES
         else {
-            console.log("you done goofed");
+            console.log("Lauren, you done goofed");
         }
     }
 
@@ -342,48 +526,63 @@ const Mass = () => {
         <div className="row mainSection">
             {/* <div className="col-md-1"></div> */}
             <SideBar />
-            <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
-                
-                <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
-                <div className="select inputMenu text-center">
-                    <select id="unitInput" className="unitMenu" name="unitInput">
-                        <option value="0">Select unit:</option>
-                        <option value="ounces">ounces</option>
-                        <option value="pounds">pounds</option>
-                        <option value="stone">stone</option>
-                        <option value="tons">tons</option>
-                        <option value="milligrams">milligrams</option>
-                        <option value="grams">grams</option>
-                        <option value="kilograms">kilograms</option>
-                        <option value="tonnes">tonnes</option>
-                        <option value="nauticalMiles">karats</option>
-                    </select>
+
+            <div className="col-9">
+                <div className="row titleRow">
+                    <div className="col-md-12">
+                        <h3>Distance / Length</h3>
+                    </div>
                 </div>
-            </div>
-            {/* <div className="row"> */}
-            <div className="col-md-2 col-xs-10 col-sm-10 buttonBox">
-                <button className="convertBtn" onClick={handleConvert}>Convert!</button>
-            </div>
+                <div className="row">
                     
-            {/* </div> */}
-            <div className="col-md-4 col-xs-10 col-sm-10 resultBox">Result: {result} 
-                <div className="select outputMenu text-center">
-                    <select id="unitOutput" className="unitMenu" name="unitOutput">
-                        <option value="0">Select unit:</option>
-                        <option value="ounces">ounces</option>
-                        <option value="pounds">pounds</option>
-                        <option value="stone">stone</option>
-                        <option value="tons">tons</option>
-                        <option value="milligrams">milligrams</option>
-                        <option value="grams">grams</option>
-                        <option value="kilograms">kilograms</option>
-                        <option value="tonnes">tonnes</option>
-                        <option value="nauticalMiles">karats</option>
-                    </select>
+                    <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
+                    
+                        <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
+                        <div className="select inputMenu text-center">
+                            <select id="unitInput" className="unitMenu" name="unitInput">
+                                <option value="0">Select unit:</option>
+                                <option value="ounces">ounces</option>
+                                <option value="pounds">pounds</option>
+                                <option value="stone">stone</option>
+                                <option value="tons">tons</option>
+                                <option value="milligrams">milligrams</option>
+                                <option value="grams">grams</option>
+                                <option value="kilograms">kilograms</option>
+                                <option value="tonnes">tonnes</option>
+                                <option value="nauticalMiles">karats</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    {/* <div className="row"> */}
+                    <div className="col-md-2 col-xs-10 col-sm-10 buttonBox">
+                        <button className="convertBtn" onClick={handleConvert}>Convert!</button>
+                    </div>
+                            
+                    {/* </div> */}
+                    <div className="col-md-4 col-xs-10 col-sm-10 resultBox">Result: {result} 
+                        <div className="select outputMenu text-center">
+                            <select id="unitOutput" className="unitMenu" name="unitOutput">
+                                <option value="0">Select unit:</option>
+                                <option value="ounces">ounces</option>
+                                <option value="pounds">pounds</option>
+                                <option value="stone">stone</option>
+                                <option value="tons">tons</option>
+                                <option value="milligrams">milligrams</option>
+                                <option value="grams">grams</option>
+                                <option value="kilograms">kilograms</option>
+                                <option value="tonnes">tonnes</option>
+                                <option value="nauticalMiles">karats</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            
+            </div>        
         </div>
     );
 };
 
 export default Mass;
+
+
