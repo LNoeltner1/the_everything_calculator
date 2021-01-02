@@ -279,24 +279,54 @@ const Mass = () => {
         console.log(inputUnitMenu.options[inputUnitMenu.selectedIndex].value);
         
         // comparing unit choices
-        //kilometers and miles
+        //mg and kg
         if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kilometers" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "miles") {
             kilometersToMiles();
         } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "miles" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kilometers") {
             milesToKilometers();
         }
-        //feet and miles
+        //g and kg
          else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "feet" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "miles") {
             feetToMiles();
         } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "miles" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "feet") {
             milesToFeet();
         }
-        //feet and inches
-        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "feet" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "inches") {
-            feetToInches();
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "inches" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "feet") {
-            inchesToFeet();
-        }
+        //kg and tonnes
+        //tonnes and karats
+        //carats and oz
+        //oz and pounds
+        //pounds and stone
+        //stone and tons
+        //tons and mg
+        //mg and kg
+        //mg and tonnes
+        //mg and karats
+        //mg and oz
+        //mg and pounds
+        //mg and stone
+        //g and tonnes
+        //g and karats
+        //g and oz
+        //g and pounds
+        //g and stone
+        //g and ton
+        //kg and karats
+        //kg and oz
+        //kg and pounds
+        //kg and stone
+        //kg and ton
+        //tonnes and karats
+        //tonnes and oz
+        //tonnes and pounds
+        //tonnes and stone
+        //tonnes and tons
+        //pounds and tons
+        //karats and tons
+        //karats and pounds
+        //karats and stone
+        //oz and stone
+        //oz and tons
+
         // IF INPUT AND OUTPUT UNIT ARE THE SAME
         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === outputUnitMenu.options[outputUnitMenu.selectedIndex].value) {
             console.log("no can do, buckaroo");
