@@ -623,6 +623,7 @@ const Volume = () => {
         // IF NOTHING MATCHES
         else {
             console.log("Lauren, you done goofed");
+            alert("Error: Lauren goofed");
         }
     }
     return (
@@ -633,7 +634,7 @@ const Volume = () => {
             <div className="col-9">
                 <div className="row titleRow">
                     <div className="col-md-12">
-                        <h3>Mass / Weight</h3>
+                        <h3>Volume</h3>
                     </div>
                 </div>
                 <div className="row">
@@ -651,7 +652,7 @@ const Volume = () => {
                                 <option value="pints">pints (pt.)</option>
                                 <option value="quarts">quarts (qt.)</option>
                                 <option value="gallons">gallons (gl.)</option>
-                                <option value="ml">millileters (ml)</option>
+                                <option value="ml">milliliters (ml)</option>
                                 <option value="liters">liters (l)</option>
                                 <option value="m3">cubic meters (m^3)</option>
 
@@ -687,7 +688,7 @@ const Volume = () => {
                                 <option value="pints">pints (pt.)</option>
                                 <option value="quarts">quarts (qt.)</option>
                                 <option value="gallons">gallons (gl.)</option>
-                                <option value="ml">millileters (ml)</option>
+                                <option value="ml">milliliters (ml)</option>
                                 <option value="liters">liters (l)</option>
                                 <option value="m3">cubic meters (m^3)</option>
                             </select>
