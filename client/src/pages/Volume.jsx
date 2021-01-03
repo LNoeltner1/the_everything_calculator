@@ -16,54 +16,321 @@ const Volume = () => {
         // CONVERSION EQUATIONS
 
     //pint and quarts
+    const pintsToQuarts = () => {
+        setResult(inputValue / 2);
+    }
+    const quartsToPints = () => {
+        setResult(inputValue * 2);
+    }
     //pints and gallons
+    const pintsToGallons = () => {
+        setResult(inputValue / 8);
+    }
+    const gallonsToPints = () => {
+        setResult(inputValue * 8);
+    }
     //pints and ml
+    const pintsToMilliliters = () => {
+        setResult(inputValue * 473);
+    }
+    const millilitersToPints = () => {
+        setResult(inputValue / 473);
+    }
     //pints and liters
+    const pintsToLiters = () => {
+        setResult(inputValue / 2.113);
+    }
+    const litersToPints = () => {
+        setResult(inputValue * 2.113);
+    }
     //pints and m^3
+    const pintsToCubicMeters = () => {
+        setResult(inputValue / 2113);
+    }
+    const cubicMetersToPints = () => {
+        setResult(inputValue * 2113);
+    }
     //pints and tsp
+    const pintsToTeaspoons = () => {
+        setResult(inputValue * 96);
+    }
+    const teaspoonsToPints = () => {
+        setResult(inputValue / 96);
+    }
     //pints and cups
+    const pintsToCups = () => {
+        setResult(inputValue * 2);
+    }
+    const cupsToPints = () => {
+        setResult(inputValue / 2);
+    }
     //pints and tbsp
+    const pintsToTablespoons = () => {
+        setResult(inputValue * 32);
+    }
+    const tablespoonsToPints = () => {
+        setResult(inputValue / 32);
+    }
     //quarts and gallons
+    const quartsToGallons = () => {
+        setResult(inputValue / 4);
+    }
+    const gallonsToQuarts = () => {
+        setResult(inputValue * 4);
+    }
     //quarts and liters
+    const quartsToLiters = () => {
+        setResult(inputValue / 1.057);
+    }
+    const litersToQuarts = () => {
+        setResult(inputValue / 1.057);
+    }
     //quarts and m^3
+    const quartsToCubicMeters = () => {
+        setResult(inputValue / 1057);
+    }
+    const cubicMetersToQuarts = () => {
+        setResult(inputValue * 1057);
+    }
     //quarts and tbsp
+    const quartsToTablespoons = () => {
+        setResult(inputValue * 64);
+    }
+    const tablespoonsToQuarts = () => {
+        setResult(inputValue / 64);
+    }
     //quarts and ml
+    const quartsToMilliliters = () => {
+        setResult(inputValue * 946);
+    }
+    const millilitersToQuarts = () => {
+        setResult(inputValue / 946);
+    }
     //gallons and m^3
+    const gallonsToCubicMeters = () => {
+        setResult(inputValue / 264);
+    }
+    const cubicMetersToGallons = () => {
+        setResult(inputValue * 264);
+    }
     //gallons and ml
+    const gallonsToMilliliters = () => {
+        setResult(inputValue * 3785);
+    }
+    const millilitersToGallons = () => {
+        setResult(inputValue / 3785);
+    }
     //gallons and tsp
+    const gallonsToTeaspoons = () => {
+        setResult(inputValue * 768);
+    }
+    const teaspoonsToGallons = () => {
+        setResult(inputValue / 768);
+    }
     //gallons and tbsp
+    const gallonsToTablespoons = () => {
+        setResult(inputValue * 256);
+    }
+    const tablespoonsToGallons = () => {
+        setResult(inputValue * 264);
+    }
     //gallons and cups
+    const gallonsToCups = () => {
+        setResult(inputValue * 16);
+    }
+    const cupsToGallons = () => {
+        setResult(inputValue / 16);
+    }
     //liters and m^3
-    //liters and tsp
-    //liters and gallon
-    //liters and tbsp
-    //liters and cups
-    //floz and cups
-    //floz and pints
-    //floz and quarts
-    //floz and gallons
-    //floz and ml
-    //floz and liters
-    //floz and m^3
-    //floz and tsp
-    //ml and tsp
-    //ml and tbsp
-    //ml and liters
-    //ml and cups
-    //m^3 and tsp
-    //m^3 and tbsp
-    //m^3 and cups
-    //m^3 and ml
-    //tsp and tbsp
-    //tsp and cups
-    //tbsp and cups
-
-    const milligramsToGrams = () => {
+    const litersToCubicMeters = () => {
         setResult(inputValue / 1000);
     }
-    const gramsToMilligrams = () => {
+    const cubicMetersToLiters = () => {
         setResult(inputValue * 1000);
     }
+    //liters and tsp
+    const litersToTeaspoons = () => {
+        setResult(inputValue * 203);
+    }
+    const teaspoonsToLiters = () => {
+        setResult(inputValue / 203);
+    }
+    //liters and gallon
+    const litersToGallons = () => {
+        setResult(inputValue / 3.785);
+    }
+    const gallonsToLiters = () => {
+        setResult(inputValue * 3.785);
+    }
+    //liters and tbsp
+    const litersToTablespoons = () => {
+        setResult(inputValue * 67.628);
+    }
+    const tablespoonsToLiters = () => {
+        setResult(inputValue / 67.628);
+    }
+    //liters and cups
+    const litersToCups = () => {
+        setResult(inputValue * 4.227);
+    }
+    const cupsToLiters = () => {
+        setResult(inputValue / 4.227);
+    }
+    //floz and cups
+    const fluidOuncesToCups = () => {
+        setResult(inputValue / 8);
+    }
+    const cupsToFluidOunces = () => {
+        setResult(inputValue * 8);
+    }
+    //floz and pints
+    const fluidOuncesToPints = () => {
+        setResult(inputValue / 16);
+    }
+    const pintsToFluidOunces = () => {
+        setResult(inputValue * 16);
+    }
+    //floz and quarts
+    const fluidOuncesToQuarts = () => {
+        setResult(inputValue / 32);
+    }
+    const quartsToFluidOunces = () => {
+        setResult(inputValue * 32);
+    }
+    //floz and gallons
+    const fluidOuncesToGallons = () => {
+        setResult(inputValue / 128);
+    }
+    const gallonsToFluidOunces = () => {
+        setResult(inputValue * 128);
+    }
+    //floz and ml
+    const fluidOuncesToMilliliters = () => {
+        setResult(inputValue * 29.5735);
+    }
+    const millilitersToFluidOunces = () => {
+        setResult(inputValue * 8);
+    }
+    //floz and liters
+    const fluidOuncesToLiters = () => {
+        setResult(inputValue / 33.814);
+    }
+    const litersToFluidOunces = () => {
+        setResult(inputValue * 33.814);
+    }
+    //floz and m^3
+    const fluidOuncesToCubicMeters = () => {
+        setResult(inputValue / 33814);
+    }
+    const cubicMetersToFluidOunces = () => {
+        setResult(inputValue * 33814);
+    }
+    //floz and tsp
+    const fluidOuncesToTeaspoons = () => {
+        setResult(inputValue * 6);
+    }
+    const teaspoonsToFluidOunces = () => {
+        setResult(inputValue / 6);
+    }
+    //ml and tsp
+    const millilitersToTeaspoons = () => {
+        setResult(inputValue / 4.929);
+    }
+    const teaspoonsToMilliliters = () => {
+        setResult(inputValue * 4.929);
+    }
+    //ml and tbsp
+    const millilitersToTablespoons = () => {
+        setResult(inputValue / 14.787);
+    }
+    const tablespoonsToMilliliters = () => {
+        setResult(inputValue * 14.787);
+    }
+    //ml and liters
+    const millilitersToLiters = () => {
+        setResult(inputValue / 1000);
+    }
+    const litersToMilliliters = () => {
+        setResult(inputValue * 1000);
+    }
+    //ml and cups
+    const millilitersToCups = () => {
+        setResult(inputValue / 237);
+    }
+    const cupsToMilliliters = () => {
+        setResult(inputValue * 237);
+    }
+    //m^3 and tsp
+    const cubicMetersToTeaspoons = () => {
+        setResult(inputValue * 202884);
+    }
+    const teaspoonsToCubicMeters = () => {
+        setResult(inputValue / 202884);
+    }
+    //m^3 and tbsp
+    const cubicMetersToTablespoons = () => {
+        setResult(inputValue * 67628);
+    }
+    const tablespoonsToCubicMeters = () => {
+        setResult(inputValue / 67628);
+    }
+    //m^3 and cups
+    const cubicMetersToCups = () => {
+        setResult(inputValue * 4227);
+    }
+    const cupsToCubicMeters = () => {
+        setResult(inputValue / 4227);
+    }
+    //m^3 and ml
+    const cubicMetersToMilliliters = () => {
+        setResult(inputValue * 1000000);
+    }
+    const millilitersToCubicMeters = () => {
+        setResult(inputValue / 1000000);
+    }
+    //tsp and tbsp
+    const teaspoonsToTablespoons = () => {
+        setResult(inputValue / 3);
+    }
+    const tablespoonsToTeaspoons = () => {
+        setResult(inputValue * 3);
+    }
+    //tsp and cups
+    const teaspoonsToCups = () => {
+        setResult(inputValue / 48);
+    }
+    const cupsToTeaspoons = () => {
+        setResult(inputValue * 48);
+    }
+    //tbsp and cups
+    const tablespoonsToCups = () => {
+        setResult(inputValue / 16);
+    }
+    const cupsToTablespoons = () => {
+        setResult(inputValue * 16);
+    }
+    //tbsp and floz
+    const tablespoonsToFluidOunces = () => {
+        setResult(inputValue / 2);
+    }
+    const fluidOuncesToTablespoons = () => {
+        setResult(inputValue * 2);
+    }
+    //tsp and quarts
+    const teaspoonsToQuarts = () => {
+        setResult(inputValue / 192);
+    }
+    const quartsToTeaspoons = () => {
+        setResult(inputValue * 192);
+    }
+    //cups and quarts
+    const cupsToQuarts = () => {
+        setResult(inputValue / 4);
+    }
+    const quartsToCups = () => {
+        setResult(inputValue * 4);
+    }
+    
 
     const handleConvert = (e) => {
         e.preventDefault();
@@ -279,9 +546,9 @@ const Volume = () => {
         }
         //ml and cups
         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "ml" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "cups") {
-            millilitersToLiters();
+            millilitersToCups();
         } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "cups" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "ml") {
-            litersToMilliliters();
+            cupsToMilliliters();
         }
         //m^3 and tsp
         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "m3" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tsp") {
@@ -324,6 +591,24 @@ const Volume = () => {
             tablespoonsToCups();
         } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "cups" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tbsp") {
             cupsToTablespoons();
+        }
+        //tbsp and floz
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tbsp" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "floz") {
+            tablespoonsToFluidOunces();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "floz" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tbsp") {
+            fluidOuncesToTablespoons();
+        }
+        //tsp and quarts
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "tsp" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "quarts") {
+            teaspoonsToQuarts();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "quarts" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "tsp") {
+            quartsToTeaspoons();
+        }
+        //cup and quarts
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "cups" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "quarts") {
+            cupsToQuarts();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "quarts" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "cups") {
+            quartsToCups();
         }
 
         //IF USER DOES NOT SELECT A UNIT
@@ -399,7 +684,7 @@ const Volume = () => {
                                 <option value="tbsp">tablespoons (tbsp.)</option>
                                 <option value="floz">fluid ounces (fl. oz.)</option>
                                 <option value="cups">cups (c.)</option>
-                                <option value="mpintsg">pints (pt.)</option>
+                                <option value="pints">pints (pt.)</option>
                                 <option value="quarts">quarts (qt.)</option>
                                 <option value="gallons">gallons (gl.)</option>
                                 <option value="ml">millileters (ml)</option>
