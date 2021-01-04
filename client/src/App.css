@@ -30,7 +30,7 @@
   justify-self: center;
 } */
 /* MAIN SECTION */
-.inputBox, .resultBox, .buttonBox, .sideBar {
+.inputBox, .resultBox, .buttonBox, .sideBar, .creditRow {
   /* margin-top: 2vh; */
   padding-bottom: 2vh;
   padding-top: 4vh;
