@@ -49,7 +49,65 @@ const Currency = () => {
     //EURO TO ISK
     //EURO TO PHP
     //EURO TO DKK
-    //EURO TO 
+    //EURO TO HUF
+    //EURO TO CZK 
+    //EURO TO AUD 
+    //EURO TO RON 
+    //EURO TO SEK 
+    //EURO TO IDR 
+    //EURO TO INR 
+    //EURO TO BRL 
+    //EURO TO RUB 
+    //EURO TO HRK 
+    //EURO TO JPY 
+    //EURO TO THB 
+    //EURO TO CHF 
+    //EURO TO SGD 
+    //EURO TO PLN 
+    //EURO TO BGN 
+    //EURO TO TRY 
+    //EURO TO CNY 
+    //EURO TO NOK 
+    //EURO TO NZD 
+    //EURO TO ZAR 
+    //EURO TO MXN 
+    //EURO TO ILS 
+    //EURO TO GBP
+    //EURO TO KRW 
+    //EURO TO MYR
+    
+    //USD TO CAD
+    //USD TO HKD
+    //USD TO ISK
+    //USD TO PHP
+    //USD TO DKK
+    //USD TO HUF
+    //USD TO CZK
+    //USD TO AUD
+    //USD TO RON
+    //USD TO SEK
+    //USD TO IDR
+    //USD TO INR
+    //USD TO BRL
+    //USD TO RUB
+    //USD TO HRK
+    //USD TO JPY
+    //USD TO THB
+    //USD TO CHF
+    //USD TO SGD
+    //USD TO PLN
+    //USD TO BGN
+    //USD TO TRY
+    //USD TO CNY
+    //USD TO NOK
+    //USD TO NZD
+    //USD TO ZAR
+    //USD TO MXN
+    //USD TO ILS
+    //USD TO GBP
+    //USD TO KRW
+    //USD TO MYR
+    
 
     
 
@@ -57,14 +115,16 @@ const Currency = () => {
         e.preventDefault();
         let inputUnitMenu = document.getElementById("unitInput");
         let outputUnitMenu = document.getElementById("unitOutput");
-        console.log(inputUnitMenu.options[inputUnitMenu.selectedIndex].key);
-        console.log(outputUnitMenu.options[outputUnitMenu.selectedIndex].value);
-        setResultUnit(outputUnitMenu.options[outputUnitMenu.selectedIndex].value);
+        let unitInputValue = inputUnitMenu.options[inputUnitMenu.selectedIndex].value;
+        let unitOutputValue = outputUnitMenu.options[outputUnitMenu.selectedIndex].value;
+        console.log(unitInputValue);
+        console.log(unitOutputValue);
+        setResultUnit(unitOutputValue);
         //COMPARING USER CHOICES
         //pints and quarts
-        if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "USD" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
+        if (unitInputValue === "USD" && unitOutputValue === "EU") {
             usdToEuro();
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "USD") {
+        } else if (unitInputValue === "EU" && unitOutputValue === "USD") {
             euroToUSD();
         }
         //IF USER DOES NOT SELECT A UNIT
