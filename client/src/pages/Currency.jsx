@@ -48,13 +48,13 @@ const Currency = () => {
     }
 
     const anythingToEuro = () => {
-        setResult(inputValue)
+        setResult(inputValue * (1 / latestCurrencies[inputUnit]))
     }
     //USD to Euro
     const usdToEuro = () => {
         setResult(inputValue * (1/latestCurrencies.USD));
     }
-
+    //this function makes me believe in world peace DON'T TOUCH IT
     const convertIt = () => {
         setResult(inputValue * (1 / latestCurrencies[inputUnit]) * latestCurrencies[resultUnit])
     }
@@ -110,14 +110,14 @@ const Currency = () => {
         // setInputUnit(unitInputValue);
         //COMPARING USER CHOICES
         //pints and quarts
-        if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "USD" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
-            usdToEuro();
-            console.log("usdToEuro is firing");
+        if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "EU") {
+            convertIt();
+            console.log("convertIt is firing");
         } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
             euroToAnything();
         }
-        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "HKD" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "IDR") {
-            convertIt();
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
+            anythingToEuro();
         }
         //IF USER DOES NOT SELECT A UNIT
         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "0" || outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "0") {
