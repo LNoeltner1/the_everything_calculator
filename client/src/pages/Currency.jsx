@@ -58,43 +58,6 @@ const Currency = () => {
     const convertIt = () => {
         setResult(inputValue * (1 / latestCurrencies[inputUnit]) * latestCurrencies[resultUnit])
     }
-
-
-    //CAD to EU
-    //HKD to EU
-    //ISK to EU
-    //PHP to EU
-    //DKK to EU
-    //HUF to EU
-    //CZK  to EU
-    //AUD  to EU
-    //RON  to EU
-    //SEK 
-    //IDR 
-    //INR 
-    //BRL 
-    //RUB 
-    //HRK 
-    //JPY 
-    //THB 
-    //CHF 
-    //SGD 
-    //PLN 
-    //BGN 
-    //TRY 
-    //CNY 
-    //NOK 
-    //NZD 
-    //ZAR 
-    //MXN 
-    //ILS 
-    //GBP
-    //KRW 
-    //MYR
-    
-
-    
-
     
 
     const handleConvert = (e) => {
@@ -104,23 +67,14 @@ const Currency = () => {
         console.log(inputUnit, " inputUnit")
         let inputUnitMenu = document.getElementById("unitInput");
         let outputUnitMenu = document.getElementById("unitOutput");
-        let unitInputValue = inputUnitMenu.options[inputUnitMenu.selectedIndex].value;
-        let unitOutputValue = outputUnitMenu.options[outputUnitMenu.selectedIndex].value;
+        // let unitInputValue = inputUnitMenu.options[inputUnitMenu.selectedIndex].value;
+        // let unitOutputValue = outputUnitMenu.options[outputUnitMenu.selectedIndex].value;
         // setResultUnit(unitOutputValue);
         // setInputUnit(unitInputValue);
         //COMPARING USER CHOICES
-        //pints and quarts
-        if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "EU") {
-            convertIt();
-            console.log("convertIt is firing");
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
-            euroToAnything();
-        }
-        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
-            anythingToEuro();
-        }
-        //IF USER DOES NOT SELECT A UNIT
-        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "0" || outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "0") {
+
+        //CHECKING FOR UNSELECTED UNITS
+        if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "0" || outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "0") {
             alert("You must select a unit.");
         }
         // IF INPUT AND OUTPUT UNIT ARE THE SAME
@@ -128,10 +82,19 @@ const Currency = () => {
             console.log("no can do, buckaroo");
             alert("You must select two different units to convert");
         }
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
+            anythingToEuro();
+            console.log("convertIt is firing");
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
+            euroToAnything();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "EU") {
+            convertIt();
+        }
+
+        
         // IF NOTHING MATCHES
         else {
             console.log("Lauren, you done goofed");
-            alert("Error: Lauren goofed");
         }
     }
 
