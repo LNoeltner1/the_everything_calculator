@@ -6,21 +6,18 @@ import API from "../api/API";
 
 const Currency = () => {
     const [inputValue, setInputValue] = useState(Number);
+    // const [inputUnit, setInputUnit] = useState("");
     const [result, setResult] = useState(Number);
-    const [resultUnit, setResultUnit] = useState(String);
-    const [latestCurrencies, setLatestCurrencies] = useState({});  
+    // const [resultUnit, setResultUnit] = useState(String);
+    const [latestCurrencies, setLatestCurrencies] = useState([]);  
     const [latestUpdate, setLatestUpdated] = useState(String);
 
     useEffect(() => {
         loadLatestCurrencies();
     }, []);
 
-    const handleInputChange = (e) => {
-        e.preventDefault();
-        let { value } = e.target;
-        setInputValue(value);
-    }
-
+    //establishing latest conversion rates and setting the array of 
+    //objects to
     function loadLatestCurrencies() {
         API.getAllCurrencies()
         .then((res) => {
@@ -30,20 +27,29 @@ const Currency = () => {
         })
         .catch((err) => console.log(err));
     }
+    
+    const handleInputChange = (e) => {
+        e.preventDefault();
+        let { value } = e.target;
+        setInputValue(value);
+    }
     // CONVERSION EQUATIONS
-    // must convert to euro, then to other currency
+    // must convert to euro, then to other currency?
 
-    //resultValue = 
-
-
-
+    //euro to anything
+    const euroToAnything = (id) => {
+        setResult(inputValue * latestCurrencies[id].value);
+    }
     //USD to Euro
     const usdToEuro = () => {
-        setResult(inputValue * 1/latestCurrencies.USD);
+        setResult(inputValue * (1/latestCurrencies.USD));
+        console.log(latestCurrencies.inputUnit);
     }
-    const euroToUSD = () => {
-        setResult(inputValue * latestCurrencies.USD);
-    }
+    // const euroToUSD = () => {
+    //     setResult(inputValue * latestCurrencies.USD);
+    // }
+
+
     //euro to CAD
     //euro to HKD
     //EURO TO ISK
@@ -113,19 +119,22 @@ const Currency = () => {
 
     const handleConvert = (e) => {
         e.preventDefault();
+        console.log(latestCurrencies, " latest currencies");
         let inputUnitMenu = document.getElementById("unitInput");
         let outputUnitMenu = document.getElementById("unitOutput");
         let unitInputValue = inputUnitMenu.options[inputUnitMenu.selectedIndex].value;
         let unitOutputValue = outputUnitMenu.options[outputUnitMenu.selectedIndex].value;
         console.log(unitInputValue);
         console.log(unitOutputValue);
-        setResultUnit(unitOutputValue);
+        // setResultUnit(unitOutputValue);
+        // setInputUnit(unitInputValue);
         //COMPARING USER CHOICES
         //pints and quarts
-        if (unitInputValue === "USD" && unitOutputValue === "EU") {
+        if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "USD" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
             usdToEuro();
-        } else if (unitInputValue === "EU" && unitOutputValue === "USD") {
-            euroToUSD();
+            console.log("usdToEuro is firing");
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].valueValue === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
+            euroToAnything();
         }
         //IF USER DOES NOT SELECT A UNIT
         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "0" || outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "0") {
@@ -215,7 +224,7 @@ const Currency = () => {
                                 <p>Result: </p>
                             </div>
                             <div className="col-md-8">
-                                <p className="">{result} {resultUnit}</p>
+                                <p className="">{result}</p>
                             </div>
                             
                         </div>
