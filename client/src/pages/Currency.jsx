@@ -6,7 +6,7 @@ import API from "../api/API";
 
 const Currency = () => {
     const [inputValue, setInputValue] = useState(Number);
-    // const [inputUnit, setInputUnit] = useState("");
+    const [inputUnit, setInputUnit] = useState("");
     const [result, setResult] = useState(Number);
     const [resultUnit, setResultUnit] = useState(String);
     const [latestCurrencies, setLatestCurrencies] = useState([]);  
@@ -36,86 +36,63 @@ const Currency = () => {
     const handleSetResultUnit = (e) => {
         setResultUnit(e.target.value);
     }
+    const handleSetInputUnit = (e) => {
+        setInputUnit(e.target.value);
+    }
     // CONVERSION EQUATIONS
     // must convert to euro, then to other currency?
 
-    //euro to anything
+    //euro to anything THIS FUNCTION RULES DON'T TOUCH IT
     const euroToAnything = () => {
         setResult(inputValue * latestCurrencies[resultUnit]);
+    }
+
+    const anythingToEuro = () => {
+        setResult(inputValue)
     }
     //USD to Euro
     const usdToEuro = () => {
         setResult(inputValue * (1/latestCurrencies.USD));
     }
 
-    // const euroToUSD = () => {
-    //     setResult(inputValue * latestCurrencies.USD);
-    // }
+    const convertIt = () => {
+        setResult(inputValue * (1 / latestCurrencies[inputUnit]) * latestCurrencies[resultUnit])
+    }
 
 
-    //euro to CAD
-    //euro to HKD
-    //EURO TO ISK
-    //EURO TO PHP
-    //EURO TO DKK
-    //EURO TO HUF
-    //EURO TO CZK 
-    //EURO TO AUD 
-    //EURO TO RON 
-    //EURO TO SEK 
-    //EURO TO IDR 
-    //EURO TO INR 
-    //EURO TO BRL 
-    //EURO TO RUB 
-    //EURO TO HRK 
-    //EURO TO JPY 
-    //EURO TO THB 
-    //EURO TO CHF 
-    //EURO TO SGD 
-    //EURO TO PLN 
-    //EURO TO BGN 
-    //EURO TO TRY 
-    //EURO TO CNY 
-    //EURO TO NOK 
-    //EURO TO NZD 
-    //EURO TO ZAR 
-    //EURO TO MXN 
-    //EURO TO ILS 
-    //EURO TO GBP
-    //EURO TO KRW 
-    //EURO TO MYR
+    //CAD to EU
+    //HKD to EU
+    //ISK to EU
+    //PHP to EU
+    //DKK to EU
+    //HUF to EU
+    //CZK  to EU
+    //AUD  to EU
+    //RON  to EU
+    //SEK 
+    //IDR 
+    //INR 
+    //BRL 
+    //RUB 
+    //HRK 
+    //JPY 
+    //THB 
+    //CHF 
+    //SGD 
+    //PLN 
+    //BGN 
+    //TRY 
+    //CNY 
+    //NOK 
+    //NZD 
+    //ZAR 
+    //MXN 
+    //ILS 
+    //GBP
+    //KRW 
+    //MYR
     
-    //USD TO CAD
-    //USD TO HKD
-    //USD TO ISK
-    //USD TO PHP
-    //USD TO DKK
-    //USD TO HUF
-    //USD TO CZK
-    //USD TO AUD
-    //USD TO RON
-    //USD TO SEK
-    //USD TO IDR
-    //USD TO INR
-    //USD TO BRL
-    //USD TO RUB
-    //USD TO HRK
-    //USD TO JPY
-    //USD TO THB
-    //USD TO CHF
-    //USD TO SGD
-    //USD TO PLN
-    //USD TO BGN
-    //USD TO TRY
-    //USD TO CNY
-    //USD TO NOK
-    //USD TO NZD
-    //USD TO ZAR
-    //USD TO MXN
-    //USD TO ILS
-    //USD TO GBP
-    //USD TO KRW
-    //USD TO MYR
+
     
 
     
@@ -124,12 +101,11 @@ const Currency = () => {
         e.preventDefault();
         console.log(latestCurrencies, " latest currencies");
         console.log(resultUnit, " resultUnit");
+        console.log(inputUnit, " inputUnit")
         let inputUnitMenu = document.getElementById("unitInput");
         let outputUnitMenu = document.getElementById("unitOutput");
         let unitInputValue = inputUnitMenu.options[inputUnitMenu.selectedIndex].value;
         let unitOutputValue = outputUnitMenu.options[outputUnitMenu.selectedIndex].value;
-        console.log(unitInputValue);
-        console.log(unitOutputValue);
         // setResultUnit(unitOutputValue);
         // setInputUnit(unitInputValue);
         //COMPARING USER CHOICES
@@ -139,6 +115,9 @@ const Currency = () => {
             console.log("usdToEuro is firing");
         } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
             euroToAnything();
+        }
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "HKD" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "IDR") {
+            convertIt();
         }
         //IF USER DOES NOT SELECT A UNIT
         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "0" || outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "0") {
@@ -174,7 +153,7 @@ const Currency = () => {
                     
                         <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
                         <div className="select inputMenu text-center">
-                            <select id="unitInput" className="unitMenu" name="unitInput">
+                            <select id="unitInput" className="unitMenu" name="unitInput" onChange={handleSetInputUnit}>
                                 <option value="0">Select unit:</option>
 
                                 <option value="USD">US Dollar</option>
@@ -228,7 +207,7 @@ const Currency = () => {
                                 <p>Result: </p>
                             </div>
                             <div className="col-md-8">
-                                <p className="">{result}</p>
+                                <p className="">{result} {resultUnit}</p>
                             </div>
                             
                         </div>
