@@ -8,7 +8,7 @@ const Currency = () => {
     const [inputValue, setInputValue] = useState(Number);
     // const [inputUnit, setInputUnit] = useState("");
     const [result, setResult] = useState(Number);
-    // const [resultUnit, setResultUnit] = useState(String);
+    const [resultUnit, setResultUnit] = useState(String);
     const [latestCurrencies, setLatestCurrencies] = useState([]);  
     const [latestUpdate, setLatestUpdated] = useState(String);
 
@@ -33,18 +33,21 @@ const Currency = () => {
         let { value } = e.target;
         setInputValue(value);
     }
+    const handleSetResultUnit = (e) => {
+        setResultUnit(e.target.value);
+    }
     // CONVERSION EQUATIONS
     // must convert to euro, then to other currency?
 
     //euro to anything
-    const euroToAnything = (id) => {
-        setResult(inputValue * latestCurrencies[id].value);
+    const euroToAnything = () => {
+        setResult(inputValue * latestCurrencies[resultUnit]);
     }
     //USD to Euro
     const usdToEuro = () => {
         setResult(inputValue * (1/latestCurrencies.USD));
-        console.log(latestCurrencies.inputUnit);
     }
+
     // const euroToUSD = () => {
     //     setResult(inputValue * latestCurrencies.USD);
     // }
@@ -120,6 +123,7 @@ const Currency = () => {
     const handleConvert = (e) => {
         e.preventDefault();
         console.log(latestCurrencies, " latest currencies");
+        console.log(resultUnit, " resultUnit");
         let inputUnitMenu = document.getElementById("unitInput");
         let outputUnitMenu = document.getElementById("unitOutput");
         let unitInputValue = inputUnitMenu.options[inputUnitMenu.selectedIndex].value;
@@ -133,7 +137,7 @@ const Currency = () => {
         if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "USD" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
             usdToEuro();
             console.log("usdToEuro is firing");
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].valueValue === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
             euroToAnything();
         }
         //IF USER DOES NOT SELECT A UNIT
@@ -231,7 +235,7 @@ const Currency = () => {
                         
                         
                         <div className="select outputMenu text-center">
-                            <select id="unitOutput" className="unitMenu" name="unitOutput">
+                            <select id="unitOutput" className="unitMenu" name="unitOutput" onChange={handleSetResultUnit}>
                                 <option value="0">Select unit:</option>
                                 <option value="USD">US Dollar</option>
                                 <option value="EU">Euro</option>
