@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Mass from "./pages/Mass";
 import Volume from "./pages/Volume";
 import Currency from "./pages/Currency";
+import Speed from "./pages/Speed";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route exact path="/Mass" component={Mass} />
             <Route exact path="/Volume" component={Volume} />
             <Route exact path="/Currency" component={Currency} />
+            <Route exact path="/Speed" component={Speed} />
           </Switch>
         </Router>
       </header>
