@@ -67,11 +67,7 @@ const Currency = () => {
         console.log(inputUnit, " inputUnit")
         let inputUnitMenu = document.getElementById("unitInput");
         let outputUnitMenu = document.getElementById("unitOutput");
-        // let unitInputValue = inputUnitMenu.options[inputUnitMenu.selectedIndex].value;
-        // let unitOutputValue = outputUnitMenu.options[outputUnitMenu.selectedIndex].value;
-        // setResultUnit(unitOutputValue);
-        // setInputUnit(unitInputValue);
-        //COMPARING USER CHOICES
+
 
         //CHECKING FOR UNSELECTED UNITS
         if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "0" || outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "0") {
@@ -90,8 +86,6 @@ const Currency = () => {
         } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "EU") {
             convertIt();
         }
-
-        
         // IF NOTHING MATCHES
         else {
             console.log("Lauren, you done goofed");
@@ -112,7 +106,7 @@ const Currency = () => {
                 </div>
                 <div className="row">
                     
-                    <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
+                    <div className="col-md-5 col-xs-10 col-sm-10 inputBox">
                     
                         <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
                         <div className="select inputMenu text-center">
@@ -164,7 +158,7 @@ const Currency = () => {
                     </div>
                             
                     {/* </div> */}
-                    <div className="col-md-4 col-xs-10 col-sm-10 resultBox">
+                    <div className="col-md-5 col-xs-10 col-sm-10 resultBox">
                         <div className="row">
                             <div className="col-md-3">
                                 <p>Result: </p>

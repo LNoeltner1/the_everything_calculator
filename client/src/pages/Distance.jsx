@@ -423,7 +423,7 @@ const Distance = () => {
                 </div>
                 <div className="row">
                     
-                    <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
+                    <div className="col-md-5 col-xs-10 col-sm-10 inputBox">
                     
                         <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
                         <div className="select inputMenu text-center">
@@ -450,7 +450,7 @@ const Distance = () => {
                     </div>
                             
                     {/* </div> */}
-                    <div className="col-md-4 col-xs-10 col-sm-10 resultBox">Result: {result} 
+                    <div className="col-md-5 col-xs-10 col-sm-10 resultBox">Result: {result} 
                         <div className="select outputMenu text-center">
                             <select id="unitOutput" className="unitMenu" name="unitOutput">
                                 <option value="0">Select unit:</option>

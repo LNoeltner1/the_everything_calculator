@@ -639,7 +639,7 @@ const Volume = () => {
                 </div>
                 <div className="row">
                     
-                    <div className="col-md-3 col-xs-10 col-sm-10 inputBox">
+                    <div className="col-md-5 col-xs-10 col-sm-10 inputBox">
                     
                         <input id="userInput"  type="text" name="number" value={inputValue} onChange={handleInputChange}/> 
                         <div className="select inputMenu text-center">
@@ -666,7 +666,7 @@ const Volume = () => {
                     </div>
                             
                     {/* </div> */}
-                    <div className="col-md-4 col-xs-10 col-sm-10 resultBox">
+                    <div className="col-md-5 col-xs-10 col-sm-10 resultBox">
                         <div className="row">
                             <div className="col-md-3">
                                 <p>Result: </p>
