@@ -41,17 +41,15 @@ const Speed = () => {
                         <div className="select inputMenu text-center">
                             <select id="unitInput" className="unitMenu" name="unitInput">
                                 <option value="0">Select unit:</option>
-                                <option value="inches">inches</option>
-                                <option value="feet">feet</option>
-                                <option value="yards">yards</option>
-                                <option value="miles">miles</option>
-                                <option value="millimeters">millimeters</option>
-                                <option value="centimeters">centimeters</option>
-                                <option value="meters">meters</option>
-                                <option value="kilometers">kilometers</option>
-                                <option value="nauticalMiles">nautical miles</option>
-                                <option value="lightYears">light-years</option>
-                                <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                                <option value="kmph">km/hr</option>
+                                <option value="mps">m/s</option>
+                                <option value="mph">mph</option>
+                                <option value="knots">knots</option>
+                                <option value="fps">ft./s</option>
+                                <option value="mach">Mach Number</option>
+                                <option value="light">Light Speed</option>
+                                <option value="mpm">mile/min.</option>
+                                <option value="kmps">km/s</option>
                             </select>
                         </div>
                     </div>
@@ -65,18 +63,16 @@ const Speed = () => {
                     <div className="col-md-5 col-xs-10 col-sm-10 resultBox">Result: {result} 
                         <div className="select outputMenu text-center">
                             <select id="unitOutput" className="unitMenu" name="unitOutput">
-                                <option value="0">Select unit:</option>
-                                <option value="inches">inches</option>
-                                <option value="feet">feet</option>
-                                <option value="yards">yards</option>
-                                <option value="miles">miles</option>
-                                <option value="millimeters">millimeters</option>
-                                <option value="centimeters">centimeters</option>
-                                <option value="meters">meters</option>
-                                <option value="kilometers">kilometers</option>
-                                <option value="nauticalMiles">nautical miles</option>
-                                <option value="lightYears">light-years</option>
-                                <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                            <option value="0">Select unit:</option>
+                                <option value="kmph">km/hr</option>
+                                <option value="mps">m/s</option>
+                                <option value="mph">mph</option>
+                                <option value="knots">knots</option>
+                                <option value="fps">ft./s</option>
+                                <option value="mach">Mach Number</option>
+                                <option value="light">Light Speed</option>
+                                <option value="mpm">mile/min.</option>
+                                <option value="kmps">km/s</option>
                             </select>
                         </div>
                     </div>

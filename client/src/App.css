@@ -5,7 +5,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh; 
+  min-height: 100rem; 
   /* font-size: calc(2px + 2vmin); */
   font-size: 2vh;
   color: white;
@@ -13,7 +13,7 @@
 
 /* // SIDE MENU */
 .sideBar {
-  border: 2px solid black;
+  border: 2px solid rgb(252, 238, 238);
   background-color: #8d8f92;
   margin-left: 3vh;
   margin-right: 2vh;
@@ -38,10 +38,11 @@
   background-color: #625d63;
 }
 h3 {
-  color:black;
+  color:rgb(252, 241, 241);
 }
 .mainSection {
-  background-color: #fbebf9;
+  /* background-color: #ffffff; */
+  max-height: 100%;
   padding-bottom: 5vh;
   padding-top: 5vh;
 }
