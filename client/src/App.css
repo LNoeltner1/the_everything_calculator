@@ -7,7 +7,7 @@
   background-color: #282c34;
   min-height: 100rem; 
   /* font-size: calc(2px + 2vmin); */
-  font-size: 2vh;
+  font-size: 1.5rem;
   color: white;
 }
 
@@ -15,8 +15,8 @@
 .sideBar {
   border: 2px solid rgb(252, 238, 238);
   background-color: #8d8f92;
-  margin-left: 3vh;
-  margin-right: 2vh;
+  margin-left: 3rem;
+  margin-right: 2rem;
 }
 .navLink {
   color: white;
@@ -24,17 +24,17 @@
 
 /* distance page */
 .inputMenu, .outputMenu {
-  max-width: 20vh;
+  max-width: 20rem;
 }
 /* #unitInput, #unitOutput {
   justify-self: center;
 } */
 /* MAIN SECTION */
 .inputBox, .resultBox, .buttonBox, .sideBar, .creditRow {
-  /* margin-top: 2vh; */
-  padding-bottom: 2vh;
-  padding-top: 4vh;
-  /* padding-left: 3vh; */
+  /* margin-top: 2rem; */
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+  /* padding-left: 3rem; */
   background-color: #625d63;
 }
 h3 {
@@ -43,7 +43,7 @@ h3 {
 .mainSection {
   /* background-color: #ffffff; */
   max-height: 100%;
-  padding-bottom: 5vh;
-  padding-top: 5vh;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 
