@@ -107,7 +107,7 @@ const Speed = () => {
             <div className="col-9">
                 <div className="row titleRow">
                     <div className="col-md-12">
-                        <h3>Speed / Velocity</h3>
+                        <h3>Area</h3>
                     </div>
                 </div>
                 <div className="row">
