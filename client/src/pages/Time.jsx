@@ -10,23 +10,26 @@ const Speed = () => {
     const [conversions, setConversions] = useState({});
     
     
-    //CONVERSIONS ASSUMING years IS EQUAL TO 1 -- GIVES RATIOS
+    //CONVERSIONS ASSUMING days IS EQUAL TO 1 -- GIVES RATIOS
     const conversionTable = {
-        "days": (1 / 365),
-        "ns": 0.277778,
-        "ms" : 0.621371,
-        "s" : 0.539957,
-        "minute" : 0.911344,
-        "hour" : 0.000809848,
-        "week" : 0.000000000926567,
-        "fortnite" : 0.0103562,
-        "month" : 0.000277778,
-        "year" : 1,
-        "decade" : 0.000277778,
-        "century" : 0.000277778,
-        "month" : 0.000277778,
-        "month" : 0.000277778,
-        "month" : 0.000277778
+        "days": 1,
+        "ns": 8.64e13,
+        "ms" : 86400000,
+        "s" : 86400,
+        "minute" : 1440,
+        "hour" : 24,
+        "week" : 0.142857142857143,
+        "fortnite" : 0.071428571428571,
+        "month" : 0.032876676299533,
+        "year" : 0.002739726027397,
+        "decade" : 0.0002739726027397,
+        "century" : 0.00002739726027397,
+        "millenia" : 0.000002739726027397,
+        "shake" : 8.64e14,
+        "jiffy" : 8640000,
+        "microfortnite" : 71428.5714286,
+        "dogyear" : 0.019178082244324,
+        "moment" : 960
     }
 
 
@@ -52,13 +55,13 @@ const Speed = () => {
         setInputUnit(e.target.value);
     }
 
-    // year TO ANYTHING
-    const kmphToAnything = () => {
+    // days TO ANYTHING
+    const daysToAnything = () => {
         setResult(inputValue * conversions[resultUnit]);
     }
 
-    // ANYTHING TO year
-    const anythingToKmph = () => {
+    // ANYTHING TO days
+    const anythingToDays = () => {
         setResult(inputValue * (1 / conversions[inputUnit]));
     }
 
@@ -85,12 +88,13 @@ const Speed = () => {
             console.log("no can do, buckaroo");
             alert("You must select two different units to convert");
         }
-        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kmph") {
-            anythingToKmph();
+        // else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "days") {
+        //     anythingToDays();
             
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kmph" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
-            kmphToAnything();
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "kmph" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "kmph") {
+        // } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "days" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
+        //     daysToAnything();
+        // }
+         else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
             convertIt();
         }
         // IF NOTHING MATCHES
@@ -107,7 +111,7 @@ const Speed = () => {
             <div className="col-9">
                 <div className="row titleRow">
                     <div className="col-md-12">
-                        <h3>Speed / Velocity</h3>
+                        <h3>Time</h3>
                     </div>
                 </div>
                 <div className="row">
@@ -118,15 +122,24 @@ const Speed = () => {
                         <div className="select inputMenu text-center">
                             <select id="unitInput" className="unitMenu" name="unitInput" onChange={handleSetInputUnit}>
                                 <option value="0">Select unit:</option>
-                                <option value="kmph">km/hr</option>
-                                <option value="mps">m/s</option>
-                                <option value="mph">mph</option>
-                                <option value="knots">knots</option>
-                                <option value="fps">ft./s</option>
-                                <option value="mach">Mach Number</option>
-                                <option value="light">Light Speed</option>
-                                <option value="mpm">mile/min.</option>
-                                <option value="kmps">km/s</option>
+                                <option value="days">days</option>
+                                <option value="ns">nanoseconds</option>
+                                <option value="ms">microseconds</option>
+                                <option value="s">seconds</option>
+                                <option value="minute">minutes</option>
+                                <option value="hour">hours</option>
+                                <option value="week">week</option>
+                                <option value="fortnite">fortnight</option>
+                                <option value="month">months</option>
+                                <option value="year">years</option>
+                                <option value="decade">decades</option>
+                                <option value="century">centuries</option>
+                                <option value="millenia">millenia</option>
+                                <option value="shake">shake</option>
+                                <option value="jiffy">jiffy</option>
+                                <option value="microfortnite">microfortnight</option>
+                                <option value="dogyear">dog-year</option>
+                                <option value="moment">moment</option>
                             </select>
                         </div>
                     </div>
@@ -141,15 +154,24 @@ const Speed = () => {
                         <div className="select outputMenu text-center">
                             <select id="unitOutput" className="unitMenu" name="unitOutput" onChange={handleSetResultUnit}>
                             <option value="0">Select unit:</option>
-                                <option value="kmph">km/hr</option>
-                                <option value="mps">m/s</option>
-                                <option value="mph">mph</option>
-                                <option value="knots">knots</option>
-                                <option value="fps">ft./s</option>
-                                <option value="mach">Mach Number</option>
-                                <option value="light">Light Speed</option>
-                                <option value="mpm">mile/min.</option>
-                                <option value="kmps">km/s</option>
+                                <option value="days">days</option>
+                                <option value="ns">nanoseconds</option>
+                                <option value="ms">microseconds</option>
+                                <option value="s">seconds</option>
+                                <option value="minute">minutes</option>
+                                <option value="hour">hours</option>
+                                <option value="week">week</option>
+                                <option value="fortnite">fortnight</option>
+                                <option value="month">months</option>
+                                <option value="year">years</option>
+                                <option value="decade">decades</option>
+                                <option value="century">centuries</option>
+                                <option value="millenia">millenia</option>
+                                <option value="shake">shake</option>
+                                <option value="jiffy">jiffy</option>
+                                <option value="microfortnite">microfortnight</option>
+                                <option value="dogyear">dog-year</option>
+                                <option value="moment">moment</option>
                             </select>
                         </div>
                     </div>
