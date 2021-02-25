@@ -52,17 +52,17 @@ const Speed = () => {
         setInputUnit(e.target.value);
     }
 
-    // KMPH TO ANYTHING
+    // M2 TO ANYTHING
     const msqToAnything = () => {
         setResult(inputValue * conversions[resultUnit]);
     }
 
-    // ANYTHING TO KMPH
+    // ANYTHING TO m2
     const anythingToMsq = () => {
         setResult(inputValue * (1 / conversions[inputUnit]));
     }
 
-    // IF NO KMPH, CONVERT WITH THIS EQUATION
+    // IF NO m2, CONVERT WITH THIS EQUATION
     const convertIt = () => {
         setResult(inputValue * (1 / conversions[inputUnit]) * conversions[resultUnit])
     }
