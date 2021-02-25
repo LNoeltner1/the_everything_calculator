@@ -16,6 +16,7 @@ const TypeMenu = () => {
                 <p><Link to="/Volume" id="volumeLink" className="navLink">Volume</Link></p>
                 <p><Link to="/Currency" id="currencyLink" className="navLink">Currency</Link></p>
                 <p><Link to="/Speed" id="speedLink" className="navLink">Speed</Link></p>
+                <p><Link to="/Area" id="areaLink" className="navLink">Area</Link></p>
             
 
                 
