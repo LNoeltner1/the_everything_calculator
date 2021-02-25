@@ -79,12 +79,12 @@ const Speed = () => {
             console.log("no can do, buckaroo");
             alert("You must select two different units to convert");
         }
-        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "kmph") {
             anythingToKmph();
             
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "kmph" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
             kmphToAnything();
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "EU") {
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "kmph" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "kmph") {
             convertIt();
         }
         // IF NOTHING MATCHES

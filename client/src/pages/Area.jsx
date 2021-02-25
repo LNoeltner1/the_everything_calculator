@@ -22,7 +22,7 @@ const Speed = () => {
         "mi2" : 3.86102e-7,
         "acre" : 0.000247105,
         "hectare" : 0.0001,
-        "marathon" : 3.86102254e-7,
+        "marathon" : 5.6247051e-10,
         "soccer" : 0.00014005602240896,
         "football" : 0.0001868734483664,
         "usas" : 1.0176382e-13,
@@ -53,12 +53,12 @@ const Speed = () => {
     }
 
     // KMPH TO ANYTHING
-    const kmphToAnything = () => {
+    const msqToAnything = () => {
         setResult(inputValue * conversions[resultUnit]);
     }
 
     // ANYTHING TO KMPH
-    const anythingToKmph = () => {
+    const anythingToMsq = () => {
         setResult(inputValue * (1 / conversions[inputUnit]));
     }
 
@@ -85,12 +85,12 @@ const Speed = () => {
             console.log("no can do, buckaroo");
             alert("You must select two different units to convert");
         }
-        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "EU") {
-            anythingToKmph();
+        else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "0" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value === "m2") {
+            anythingToMsq();
             
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
-            kmphToAnything();
-        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "EU" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "EU") {
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value === "m2" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "0") {
+            msqToAnything();
+        } else if (inputUnitMenu.options[inputUnitMenu.selectedIndex].value !== "m2" && outputUnitMenu.options[outputUnitMenu.selectedIndex].value !== "m2") {
             convertIt();
         }
         // IF NOTHING MATCHES
