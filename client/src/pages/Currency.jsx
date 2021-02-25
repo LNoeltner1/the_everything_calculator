@@ -51,9 +51,9 @@ const Currency = () => {
         setResult(inputValue * (1 / latestCurrencies[inputUnit]))
     }
     //USD to Euro
-    const usdToEuro = () => {
-        setResult(inputValue * (1/latestCurrencies.USD));
-    }
+    // const usdToEuro = () => {
+    //     setResult(inputValue * (1/latestCurrencies.USD));
+    // }
     //this function makes me believe in world peace DON'T TOUCH IT
     const convertIt = () => {
         setResult(inputValue * (1 / latestCurrencies[inputUnit]) * latestCurrencies[resultUnit])
