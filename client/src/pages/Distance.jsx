@@ -16,17 +16,29 @@ const Distance = () => {
     //CONVERSIONS ASSUMING days IS EQUAL TO 1 -- GIVES RATIOS
     const conversionTable = {
         "meters": 1,
-        "inches": 8.64e13,
-        "feet" : 86400000,
-        "yards" : 86400,
-        "miles" : 1440,
-        "millimeters" : 24,
-        "centimeters" : 0.142857142857143,
-        "kilometers" : 0.071428571428571,
-        "nauticalMiles" : 0.032876676299533,
-        "lightYears" : 0.002739726027397,
-        "astronomicalUnit" : 0.0002739726027397,
-       
+        "inches": 39.37007874,
+        "feet" : 3.28083989,
+        "yards" : 1.09361329834,
+        "miles" : 0.000621371192237,
+        "millimeters" : 1000,
+        "centimeters" : 100,
+        "kilometers" : 0.001,
+        "nauticalMiles" : 0.000539956803456,
+        "lightYears" : 1.057000834e-16,
+        "astronomicalUnit" : 6.685e-12,
+        "hand" : 9.84251968504,
+        "metricFoot" : 3.333333333,
+        "football" : 0.010989010989011,
+        "earthCirc" : 2.5e-8,
+        "earthRad" : 1.56961231e-7,
+        "parsec" : 3.240779289444362e-17,
+        "pace" : 1.312335958005249,
+        "league" : 2.07125103563e-4,
+        "furlong" : 4.970969537899e-3,
+        "rod" : 0.198838781515947,
+        "barleycorn" : 118.105586394236447,
+        "cubit" : 2,
+        "fathom" : 0.6468066491688554
     }
 
 
@@ -129,7 +141,20 @@ const Distance = () => {
                                 <option value="kilometers">kilometers</option>
                                 <option value="nauticalMiles">nautical miles</option>
                                 <option value="lightYears">light-years</option>
-                                <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                                <option value="astronomicalUnit">Astronomical Units (AU)</option>
+                                <option value="hand">hands</option>
+                                <option value="metricFoot">Metric feet</option>
+                                <option value="football">Football Field Lengths</option>
+                                <option value="earthCirc">Earth's Circumferences</option>
+                                <option value="earthRad">Earth's Radius</option>
+                                <option value="parsec">parsecs</option>
+                                <option value="pace">paces</option>
+                                <option value="league">leagues</option>
+                                <option value="furlong">furlongs</option>
+                                <option value="rod">rods</option>
+                                <option value="barleycorn">barleycorns</option>
+                                <option value="cubit">cubits</option>
+                                <option value="fathom">fathoms</option>
                             </select>
                         </div>
                     </div>
@@ -143,7 +168,7 @@ const Distance = () => {
                     <div className="col-md-5 col-xs-10 col-sm-10 resultBox">Result: {result} 
                         <div className="select outputMenu text-center">
                             <select id="unitOutput" className="unitMenu" name="unitOutput" onChange={handleSetResultUnit}>
-                                <option value="0">Select unit:</option>
+                            <option value="0">Select unit:</option>
                                 <option value="inches">inches</option>
                                 <option value="feet">feet</option>
                                 <option value="yards">yards</option>
@@ -154,7 +179,20 @@ const Distance = () => {
                                 <option value="kilometers">kilometers</option>
                                 <option value="nauticalMiles">nautical miles</option>
                                 <option value="lightYears">light-years</option>
-                                <option value="astronomicalUnit">Astronomical Unit (AU)</option>
+                                <option value="astronomicalUnit">Astronomical Units (AU)</option>
+                                <option value="hand">hands</option>
+                                <option value="metricFoot">Metric feet</option>
+                                <option value="football">Football Field Lengths</option>
+                                <option value="earthCirc">Earth's Circumferences</option>
+                                <option value="earthRad">Earth's Radius</option>
+                                <option value="parsec">parsecs</option>
+                                <option value="pace">paces</option>
+                                <option value="league">leagues</option>
+                                <option value="furlong">furlongs</option>
+                                <option value="rod">rods</option>
+                                <option value="barleycorn">barleycorns</option>
+                                <option value="cubit">cubits</option>
+                                <option value="fathom">fathoms</option>
                             </select>
                         </div>
                     </div>
