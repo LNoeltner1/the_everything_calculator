@@ -56,14 +56,14 @@ const Speed = () => {
     }
 
     // days TO ANYTHING
-    const daysToAnything = () => {
-        setResult(inputValue * conversions[resultUnit]);
-    }
+    // const daysToAnything = () => {
+    //     setResult(inputValue * conversions[resultUnit]);
+    // }
 
-    // ANYTHING TO days
-    const anythingToDays = () => {
-        setResult(inputValue * (1 / conversions[inputUnit]));
-    }
+    // // ANYTHING TO days
+    // const anythingToDays = () => {
+    //     setResult(inputValue * (1 / conversions[inputUnit]));
+    // }
 
     // IF NO Days, CONVERT WITH THIS EQUATION
     const convertIt = () => {
